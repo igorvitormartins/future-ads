@@ -345,6 +345,8 @@ body > main, body > header, body > footer, .fab-stack { animation: pageIn .9s ea
 }
 @media (max-width: 820px) {
   .member, .member:nth-child(2) { max-width: 100%; }
+  .team { gap: 34px; padding: 6px 0 20px; }
+  .member, .member:nth-child(2), .member:nth-child(3) { margin-top: 0; }
   .burger { display: flex; }
   .nav { position: absolute; top: 100%; left: 12px; right: 12px; margin-top: 8px; flex-direction: column; gap: 18px; padding: 24px; border-radius: 24px; background: rgba(8, 14, 40, .95); border: 1px solid var(--border); backdrop-filter: blur(16px); opacity: 0; pointer-events: none; transform: translateY(-10px); transition: .3s; }
   .nav.open { opacity: 1; pointer-events: auto; transform: none; }
@@ -359,7 +361,8 @@ body > main, body > header, body > footer, .fab-stack { animation: pageIn .9s ea
 @media (max-width: 540px) {
   .fab-stack { right: 12px; bottom: 12px; gap: 10px; }
   .fab { width: 48px; height: 48px; } .fab.ig { width: 40px; height: 40px; }
-  .av-wrap { width: 112px; }
+  .av-wrap { width: 120px; }
+  .team { gap: 40px; }
   .av-wrap::before { width: 92px; height: 92px; }
   .chip { width: 34px; height: 34px; top: 0; }
   .chip .svc-icon { width: 20px; height: 20px; }
