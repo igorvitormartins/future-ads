@@ -104,6 +104,7 @@ h1 { font-size: clamp(2.3rem, min(8vw, 12.5vh), 5.5rem); line-height: 1.02; font
 @keyframes blink { 50% { opacity: .35; } }
 
 /* foguete 3D */
+.hero-art { display: flex; justify-content: center; align-items: center; min-width: 0; }
 .rocket-btn { display: block; background: none; border: 0; cursor: pointer; width: min(420px, 90%, 58vh); -webkit-tap-highlight-color: transparent; padding: 0; }
 .scene { position: relative; display: block; width: 100%; aspect-ratio: 400 / 460; perspective: 1000px; }
 .sway { position: absolute; inset: 0; display: block; transform-style: preserve-3d; animation: sway 9s ease-in-out infinite alternate; }
@@ -339,6 +340,8 @@ html .card:hover, html .stat:hover, html .member:hover .bubble { --lift: -6px; t
   .rocket-btn { width: min(240px, 80%, 30vh); }
 }
 @media (max-width: 540px) {
+  .fab-stack { right: 12px; bottom: 12px; gap: 10px; }
+  .fab { width: 48px; height: 48px; } .fab.ig { width: 40px; height: 40px; }
   .av-wrap { width: 112px; }
   .av-wrap::before { width: 92px; height: 92px; }
   .chip { width: 34px; height: 34px; top: 0; }
