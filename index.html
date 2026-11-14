@@ -230,13 +230,13 @@ h1 { font-size: clamp(2.3rem, min(8vw, 12.5vh), 5.5rem); line-height: 1.02; font
 /* botões flutuantes (WhatsApp + Instagram) */
 .fab-stack { position: fixed; right: 18px; bottom: 18px; z-index: 60; display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .fab { position: relative; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; color: #fff; box-shadow: 0 8px 22px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.35); transition: transform .2s; }
-.fab::after { content: ''; position: absolute; inset: -2px; border-radius: 50%; border: 2px solid var(--fc); opacity: 0; animation: fabring 2.6s ease-out infinite; pointer-events: none; }
 .fab:hover { transform: scale(1.1) rotate(-6deg); }
-.fab.wa { --fc: #25d366; background: linear-gradient(135deg, #34e07f, #139b4f); }
-.fab.ig { --fc: #e1306c; width: 46px; height: 46px; background: radial-gradient(circle at 30% 107%, #fdf497 0, #fd5949 45%, #d6249f 62%, #285aeb 92%); }
-.fab.ig::after { animation-delay: -1.3s; }
-.fab[data-tip]:hover::before { content: attr(data-tip); position: absolute; right: calc(100% + 12px); top: 50%; transform: translateY(-50%); white-space: nowrap; font: 600 .78rem 'Sora', sans-serif; padding: 6px 12px; border-radius: 999px; background: rgba(6,16,48,.95); border: 1px solid var(--border); }
-@keyframes fabring { 0% { transform: scale(1); opacity: .7; } 100% { transform: scale(1.55); opacity: 0; } }
+.fab.wa { background: linear-gradient(135deg, #34e07f, #139b4f); box-shadow: 0 8px 22px rgba(0,0,0,.45), 0 0 0 5px rgba(37,211,102,.22), inset 0 1px 0 rgba(255,255,255,.35); }
+.fab.wa svg { animation: fabwiggle 5s ease-in-out infinite; transform-origin: 50% 60%; }
+.fab.ig { width: 46px; height: 46px; background: radial-gradient(circle at 30% 107%, #fdf497 0, #fd5949 45%, #d6249f 62%, #285aeb 92%); }
+@media (hover: hover) { .fab[data-tip]:hover::before { content: attr(data-tip); position: absolute; right: calc(100% + 12px); top: 50%; transform: translateY(-50%); white-space: nowrap; font: 600 .78rem 'Sora', sans-serif; padding: 6px 12px; border-radius: 999px; background: rgba(6,16,48,.95); border: 1px solid var(--border); }
+}
+@keyframes fabwiggle { 0%, 82%, 100% { transform: rotate(0) scale(1); } 86% { transform: rotate(-14deg) scale(1.08); } 90% { transform: rotate(12deg) scale(1.08); } 94% { transform: rotate(-8deg); } 97% { transform: rotate(5deg); } }
 .socials { display: flex; gap: 10px; }
 .social.ig:hover { background: radial-gradient(circle at 30% 107%, #fdf497 0, #fd5949 45%, #d6249f 62%, #285aeb 92%); border-color: transparent; transform: rotate(-12deg) scale(1.1); }
 
